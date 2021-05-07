@@ -1,5 +1,6 @@
 export const apiEndPoint = () => {
-  return 'http://localhost:5000';
+  // return 'http://localhost:5000';
+  return 'https://voucher-app-backend.herokuapp.com';
 };
 
 export const configHeader = () => {
