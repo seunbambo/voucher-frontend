@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { logout } from '../../redux/actions/auth';
 
 const Navbar = (props) => {
-  const { isAuthenticated, balance, logout } = props;
+  const { isAuthenticated, logout } = props;
   const history = useHistory();
 
   const logoutUser = () => {
@@ -22,7 +22,7 @@ const Navbar = (props) => {
             <Link to={'/dashboard'} className='navbar-brand'>
               Voucher App
             </Link>
-            Balance: {balance}
+            {/* Balance: {balance} */}
             <div className='collapses navbar-collapses'>
               <ul className='navbar-nav ml-auto'>
                 <li className='nav-item'>
@@ -48,7 +48,6 @@ Navbar.propTypes = {
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
-  balance: state.user.balance,
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);

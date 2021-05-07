@@ -9,15 +9,11 @@ import { addModal } from '../../../redux/actions/modal';
 import './Card.css';
 
 const Card = (props) => {
-  const { addModal, vouchers } = props;
+  const { addModal, vouchers, balance } = props;
 
   const findByStatus = (value) => {
     return _.filter(vouchers, ['status', value]).length;
   };
-
-  //   const findByPriority = (value) => {
-  //     return _.filter(vouchers, ['priority', value]).length;
-  //   };
 
   return (
     <div>
@@ -26,7 +22,8 @@ const Card = (props) => {
         label='Add Voucher'
         className='btn btn-primary btn-add'
         handleClick={() => addModal(true)}
-      />
+      />{' '}
+      {}
       <div className='text-center mb-2'>
         <div className='row'>
           <Box
@@ -52,30 +49,6 @@ const Card = (props) => {
             type='Inactive'
             status='status'
           />
-          {/* <Box 
-                        title="High Priority Vouchers"
-                        cardValue={findByPriority('High')}
-                        iconClass="fas fa-temperature-high"
-                        cardValueClass="text-danger"
-                        type="High"
-                        status="priority"
-                    />
-                    <Box 
-                        title="Medium Priority Vouchers"
-                        cardValue={findByPriority('Medium')}
-                        iconClass="fas fa-folder-minus"
-                        cardValueClass="text-warning"
-                        type="Medium"
-                        status="priority"
-                    />
-                    <Box 
-                        title="Low Priority Vouchers"
-                        cardValue={findByPriority('Low')}
-                        iconClass="fas fa-battery-quarter"
-                        cardValueClass="text-muted"
-                        type="Low"
-                        status="priority"
-                    /> */}
         </div>
       </div>
     </div>
@@ -89,6 +62,7 @@ Card.propTypes = {
 
 const mapStateToProps = (state) => ({
   vouchers: state.vouchers.vouchers,
+  // balance: state.user.balance,
 });
 
 export default connect(mapStateToProps, { addModal })(Card);

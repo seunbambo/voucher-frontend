@@ -63,57 +63,6 @@ const AddVoucherForm = (props) => {
             onChange={onChange}
           />
         </div>
-        {/* <div className='form-group'>
-          <FormInput
-            type='text'
-            name='email'
-            label='Email'
-            className='form-control'
-            placeholder='Enter Email'
-            value={email}
-            error=''
-            onChange={onChange}
-          />
-        </div>
-        <div className='form-group'>
-          <DropDown
-            title={department}
-            label='Departments'
-            list={departments}
-            getDropDownValue={getDropDownValue}
-          />
-        </div>
-        <div className='form-group'>
-          <DropDown
-            title={priority}
-            label='Priority'
-            list={priorities}
-            getDropDownValue={getDropDownValue}
-          />
-        </div>
-        <div className='form-group'>
-          <FormInput
-            type='text'
-            name='subject'
-            label='Subject'
-            className='form-control'
-            placeholder='Enter Subject'
-            value={subject}
-            error=''
-            onChange={onChange}
-          />
-        </div>
-        <div className='form-group'>
-          <label>Description</label>
-          <textarea
-            className='form-control'
-            name='description'
-            row='5'
-            col='40'
-            value={description}
-            onChange={onChange}
-          ></textarea>
-        </div> */}
         <Button
           className='btn btn-primary'
           label='ADD'
