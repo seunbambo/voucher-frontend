@@ -9,7 +9,7 @@ import { addModal } from '../../../redux/actions/modal';
 import './Card.css';
 
 const Card = (props) => {
-  const { addModal, vouchers, balance } = props;
+  const { addModal, vouchers } = props;
 
   const findByStatus = (value) => {
     return _.filter(vouchers, ['status', value]).length;
