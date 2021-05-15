@@ -50,37 +50,37 @@ function App() {
     );
   };
 
-  if (!isReady()) {
-    return (
-      <div className='text-light'>
-        Please install Metamask plugin and ensure you switch to Rinkeby Test
-        Network.
-      </div>
-    );
-  } else {
-    return (
-      <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <Router>
-            <Navbar />
-            <div className='App container'>
-              <Switch>
-                <PrivateRoute exact path='/dashboard' component={Dashboard} />
-                <PrivateRoute
-                  exact
-                  path='/vouchers/:status/:type'
-                  component={FilteredTable}
-                />
-                <Route exact path='/' component={Login} />
-                <Route exact path='/sign-in' component={Login} />
-                <Route exact path='/sign-up' component={Register} />
-              </Switch>
-            </div>
-          </Router>
-        </PersistGate>
-      </Provider>
-    );
-  }
+  // if (isReady()) {
+  //   return (
+  //     <div className='text-light'>
+  //       Please install Metamask plugin and ensure you switch to Rinkeby Test
+  //       Network.
+  //     </div>
+  //   );
+  // } else {
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router>
+          <Navbar />
+          <div className='App container'>
+            <Switch>
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
+              <PrivateRoute
+                exact
+                path='/vouchers/:status/:type'
+                component={FilteredTable}
+              />
+              <Route exact path='/' component={Login} />
+              <Route exact path='/sign-in' component={Login} />
+              <Route exact path='/sign-up' component={Register} />
+            </Switch>
+          </div>
+        </Router>
+      </PersistGate>
+    </Provider>
+  );
 }
+// }
 
 export default App;

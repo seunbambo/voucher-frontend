@@ -7,10 +7,9 @@ import { FormInput } from '../../../reusable/FormInput';
 import { Button } from '../../../reusable/Button';
 import { addNewVoucher } from '../../../../services/voucher.service';
 import { apiEndPoint } from '../../../../Config';
+import Subscription from '../../../../contracts/Subscription.json';
 
 const API_ENDPOINT = apiEndPoint();
-
-const Subscription = require('../../../../contracts/Subscription.json');
 
 const RANDOM_VALUE_MULTIPLIER = 10001;
 
